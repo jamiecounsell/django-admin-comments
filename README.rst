@@ -7,8 +7,6 @@ A reusable Django application that adds simple admin-panel comments
 to any model, allowing Django Administrators to communicate
 on certain objects more easily.
 
-|image5|
-
 Quickstart
 ----------
 
@@ -135,4 +133,3 @@ Tools used in rendering this package:
    :target: https://codecov.io/gh/jamiecounsell/django-admin-comments
 .. |image4| image:: https://img.shields.io/pypi/l/django-admin-comments.svg
    :target: https://github.com/jamiecounsell/django-admin-comments/blob/master/LICENSE
-.. |image5| image:: https://user-images.githubusercontent.com/2321599/33807503-d7f31922-dda5-11e7-83c9-c4e7ef557cc6.png
