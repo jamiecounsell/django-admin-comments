@@ -131,5 +131,5 @@ Tools used in rendering this package:
    :target: https://travis-ci.org/jamiecounsell/django-admin-comments
 .. |image3| image:: https://img.shields.io/codecov/c/github/jamiecounsell/django-admin-comments.svg
    :target: https://codecov.io/gh/jamiecounsell/django-admin-comments
-.. |image4| image:: https://img.shields.io/pypi/l/django-admin-comments.svg
-   :target: https://github.com/jamiecounsell/django-admin-comments/blob/master/LICENSE
+.. |image4| image:: https://img.shields.io/badge/Fork%20on%20Github--brightgreen.svg?colorB=4dbf30
+   :target: https://github.com/jamiecounsell/django-admin-comments/
