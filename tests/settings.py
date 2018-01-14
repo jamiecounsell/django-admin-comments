@@ -16,7 +16,7 @@ DATABASES = {
     }
 }
 
-ROOT_URLCONF = "tests.urls"
+ROOT_URLCONF = "example.example.urls"
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.sessions",
     "admin_comments",
+    "example.example"
 ]
 
 SITE_ID = 1

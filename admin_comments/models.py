@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from django.contrib.auth import get_user_model
+from django.conf import settings
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
-
-User = get_user_model()
 
 
 class Comment(models.Model):
@@ -25,7 +23,7 @@ class Comment(models.Model):
     )
 
     user = models.ForeignKey(
-        User,
+        settings.AUTH_USER_MODEL,
         on_delete = models.SET_NULL,
         blank = False,
         null = True

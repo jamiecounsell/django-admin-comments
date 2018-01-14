@@ -11,11 +11,11 @@ class CommentInlineForm(forms.ModelForm):
             self.fields['comment'].widget.attrs['readonly'] = True
             self.fields['comment'].widget.attrs['border'] = 0
 
-
     class Media:
         css = {
             'all': ('css/admin_comments.css',)
         }
+
 
 class CommentInlineFormset(BaseGenericInlineFormSet):
     def save_new(self, form, commit=True):
