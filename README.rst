@@ -1,7 +1,7 @@
 Django Admin Comments
 =============================
 
-|image1| |image2| |image3| |image4| |image5|
+|image1| |image2| |image3| |image4|
 
 A reusable Django application that adds simple admin-panel comments
 to any model, allowing Django Administrators to communicate
@@ -131,7 +131,5 @@ Tools used in rendering this package:
    :target: https://travis-ci.org/jamiecounsell/django-admin-comments
 .. |image3| image:: https://img.shields.io/codecov/c/github/jamiecounsell/django-admin-comments.svg
    :target: https://codecov.io/gh/jamiecounsell/django-admin-comments
-.. |image4| image:: https://img.shields.io/pypi/l/django-admin-comments.svg?colorB=4dbf30
-   :target: https://github.com/jamiecounsell/django-admin-comments/blob/master/LICENSE
-.. |image5| image:: https://img.shields.io/badge/Fork%20on%20Github--brightgreen.svg?colorB=4dbf30
+.. |image4| image:: https://img.shields.io/badge/Fork%20on%20Github--brightgreen.svg?colorB=4dbf30
    :target: https://github.com/jamiecounsell/django-admin-comments/
