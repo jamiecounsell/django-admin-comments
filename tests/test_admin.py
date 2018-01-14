@@ -3,7 +3,6 @@ from __future__ import print_function
 
 from django.contrib.auth.models import User
 from django.test import Client, TestCase, override_settings
-from django.urls import reverse
 from django.conf.urls import url
 from django.contrib.admin import site
 from admin_comments.models import Comment
@@ -11,6 +10,12 @@ from admin_comments.admin import CommentInline
 from example.example.models import Musician
 
 from example.example import urls
+
+try:
+    from django.urls import reverse
+except ImportError:
+    from django.core.urlresolvers import reverse
+
 
 class AdminTestCase(TestCase):
 
