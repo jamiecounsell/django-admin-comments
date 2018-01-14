@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.contenttypes.admin import BaseGenericInlineFormSet
+from admin_comments.models import Comment
 
 
 class CommentInlineForm(forms.ModelForm):
@@ -10,6 +11,10 @@ class CommentInlineForm(forms.ModelForm):
         if instance and instance.pk:
             self.fields['comment'].widget.attrs['readonly'] = True
             self.fields['comment'].widget.attrs['border'] = 0
+
+    class Meta:
+        model = Comment
+        exclude = []
 
     class Media:
         css = {
