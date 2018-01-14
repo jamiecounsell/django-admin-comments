@@ -41,3 +41,6 @@ class CommentInline(GenericTabularInline):
             request, obj, **kwargs)
         formset.current_user = request.user
         return formset
+
+
+__all__ = ['CommentInline']

@@ -27,3 +27,6 @@ class CommentInlineFormset(BaseGenericInlineFormSet):
         setattr(form.instance, "user", self.current_user)
         return super(CommentInlineFormset, self).save_new(
             form, commit=True)
+
+
+__all__ = ['CommentInlineForm', 'CommentInlineFormset']

@@ -39,3 +39,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.time.strftime("%b. %d, %Y, %-I:%M %p")
+
+
+__all__ = ['Comment']
