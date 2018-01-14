@@ -3,18 +3,10 @@ from __future__ import print_function
 
 from django.contrib.auth.models import User
 from django.test import Client, TestCase, override_settings
-from django.conf.urls import url
 from django.contrib.admin import site
 from admin_comments.models import Comment
 from admin_comments.admin import CommentInline
 from example.example.models import Musician
-
-from example.example import urls
-
-try:
-    from django.urls import reverse
-except ImportError:
-    from django.core.urlresolvers import reverse
 
 
 class AdminTestCase(TestCase):
@@ -25,7 +17,6 @@ class AdminTestCase(TestCase):
         self.admin = User.objects.create_superuser(
             'admin', 'example-email@website.com', self.password)
         self.client = Client()
-        self.urls = urls.urlpatterns
 
     @override_settings(ADMIN_COMMENTS_FORM_CLASS = 'tests.forms.MyTestForm')
     def test_inline_honors_form_class_setting(self):
@@ -65,20 +56,3 @@ class AdminTestCase(TestCase):
             inlines = [CommentInline]
 
         site.register(Musician, MusicianAdmin)
-
-    def test_admin_returns_form(self):
-        from django.contrib.admin import AdminSite, ModelAdmin
-
-        site = AdminSite()
-
-        class MusicianAdmin(ModelAdmin):
-            inlines = [CommentInline]
-
-        site.register(Musician, MusicianAdmin)
-
-        self.urls += url(r'^test/', site.urls),
-
-        self.client.force_login(self.admin)
-        resp = self.client.get(reverse("admin:example_musician_add"))
-
-        self.assertContains(resp, "<td class=\"field-comment\">")
