@@ -33,6 +33,9 @@ class CommentInline(GenericTabularInline):
         self.extra = 1 if SHOW_EMPTY else 0
         super(CommentInline, self).__init__(*args, **kwargs)
 
+    def get_queryset(self, request):
+        return super(CommentInline, self).get_queryset(request).order_by('-time')
+
     def has_delete_permission(self, request, obj=None):
         return False
 
