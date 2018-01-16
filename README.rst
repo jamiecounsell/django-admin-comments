@@ -16,7 +16,7 @@ Quickstart
 
        $ pip install django-admin-comments
 
--  Add it to your \`INSTALLED_APPS`:
+-  Add it to your ``INSTALLED_APPS``:
 
    .. code:: python
 
@@ -32,7 +32,7 @@ Quickstart
 
        $ manage.py migrate
 
-- Now, simply add the \`CommentInline` to any \`ModelAdmin`
+- Now, simply add the ``CommentInline`` to any ``ModelAdmin``
 
    .. code:: python
 
