@@ -9,7 +9,7 @@ class Comment(models.Model):
 
     # Support integer and UUID primary keys
     object_id = models.CharField(
-        max_length = 32
+        max_length=36  # 36 chosen to match UUID length (RFC4122)
     )
 
     content_object = GenericForeignKey(
@@ -19,14 +19,14 @@ class Comment(models.Model):
 
     content_type = models.ForeignKey(
         ContentType,
-        on_delete = models.CASCADE
+        on_delete=models.CASCADE
     )
 
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
-        on_delete = models.SET_NULL,
-        blank = False,
-        null = True
+        on_delete=models.SET_NULL,
+        blank=False,
+        null=True
     )
 
     time = models.DateTimeField(
@@ -34,7 +34,7 @@ class Comment(models.Model):
     )
 
     comment = models.TextField(
-        blank = False
+        blank=False
     )
 
     def __str__(self):
