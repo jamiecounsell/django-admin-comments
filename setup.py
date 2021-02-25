@@ -56,7 +56,9 @@ setup(
         'admin_comments',
     ],
     include_package_data=True,
-    install_requires=[],
+    install_requires=[
+        "django>=1.8",
+    ],
     license="MIT",
     zip_safe=False,
     keywords='django-admin-comments',
