@@ -10,8 +10,6 @@ class CommentInline(GenericTabularInline):
 
     readonly_fields = ('user',)
 
-    classes = ['collapse']
-
     def __init__(self, *args, **kwargs):
         form_klass = getattr(
             settings,
@@ -24,6 +22,11 @@ class CommentInline(GenericTabularInline):
             'admin_comments.forms.CommentInlineFormset')
 
         SHOW_EMPTY = getattr(settings, 'ADMIN_COMMENTS_SHOW_EMPTY', False)
+
+        COLLAPSIBLE_COMMENTS = getattr(settings, 'ADMIN_COMMENTS_COLLAPSIBLE_COMMENTS', True)
+
+        if COLLAPSIBLE_COMMENTS:
+            self.classes = ['collapse']
 
         CommentForm = get_class_from_str(form_klass)
         CommentFormSet = get_class_from_str(formset_klass)
