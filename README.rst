@@ -74,6 +74,8 @@ Settings
 
        ADMIN_COMMENTS_FORMSET_CLASS = "myapp.forms.MyCustomCommentFormSet"
 
+- ``ADMIN_COMMENTS_COLLAPSIBLE_COMMENTS``: Should the comments be collapsible? (Default ``True``)
+
 Features
 --------
 
