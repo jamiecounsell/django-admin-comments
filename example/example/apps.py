@@ -4,5 +4,5 @@ import os
 
 
 class ExampleAppConfig(AppConfig):
-    name = 'example'
+    name = "example"
     path = os.path.abspath(os.path.dirname(__file__))

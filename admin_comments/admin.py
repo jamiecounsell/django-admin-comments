@@ -6,7 +6,7 @@ from django.conf import settings
 
 class BaseInline:
     readonly_fields = ("user",)
-    classes = ["collapse"]
+    classes = []
 
     def __init__(self, *args, **kwargs):
         form_klass = getattr(

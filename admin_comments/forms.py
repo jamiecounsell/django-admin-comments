@@ -30,10 +30,10 @@ class AttachmentInlineForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(AttachmentInlineForm, self).__init__(*args, **kwargs)
         instance = getattr(self, "instance", None)
-        self.fields["comment"].widget.attrs["rows"] = 4
+        self.fields["note"].widget.attrs["rows"] = 4
         if instance and instance.pk:
-            self.fields["comment"].widget.attrs["readonly"] = True
-            self.fields["comment"].widget.attrs["border"] = 0
+            self.fields["note"].widget.attrs["readonly"] = True
+            self.fields["note"].widget.attrs["border"] = 0
 
     class Meta:
         model = Attachment
