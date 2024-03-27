@@ -33,6 +33,7 @@ class AttachmentInlineForm(forms.ModelForm):
         self.fields["note"].widget.attrs["rows"] = 4
         if instance and instance.pk:
             self.fields["note"].widget.attrs["readonly"] = True
+            self.fields["file"].widget.attrs["readonly"] = True
             self.fields["note"].widget.attrs["border"] = 0
 
     class Meta:
