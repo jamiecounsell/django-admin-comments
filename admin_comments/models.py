@@ -9,7 +9,6 @@ class Comment(models.Model):
     # Support integer and UUID primary keys
     object_id = models.CharField(
         max_length=36,  # 36 chosen to match UUID length (RFC4122)
-        primary_key=True,
     )
     content_object = GenericForeignKey("content_type", "object_id")
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
@@ -27,7 +26,6 @@ class Attachment(models.Model):
     # Support integer and UUID primary keys
     object_id = models.CharField(
         max_length=36,  # 36 chosen to match UUID length (RFC4122)
-        primary_key=True,
     )
     content_object = GenericForeignKey("content_type", "object_id")
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
